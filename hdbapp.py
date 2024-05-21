@@ -110,15 +110,11 @@ feature_cols = ['mid_storey','hdb_age','bus_interchange','max_floor_lvl','Mall_N
                 'region_east','region_north','region_north_east','region_west']
 
 
-'''
-Streamlit page rendering start from here onwards 
-'''
 # Set Page configuration
-# Read more at https://docs.streamlit.io/1.6.0/library/api-reference/utilities/st.set_page_config
 st.set_page_config(page_title='HDB Resale Price Predictor', 
                    page_icon='house-buildings', 
                    layout='centered', 
-                   initial_sidebar_state='collapsed',
+                #    initial_sidebar_state='collapsed',
                    menu_items= {
                        'Get Help':'http://localhost:8501',
                        'Report a bug':'http://localhost:8501',
