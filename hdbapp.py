@@ -10,6 +10,21 @@ import numpy as np
 import pickle
 from string import capwords 
 
+# Set Page configuration
+st.set_page_config(page_title='HDB Resale Price Predictor', 
+                   page_icon='house-buildings', 
+                   layout='centered', 
+                #    initial_sidebar_state='collapsed',
+                   menu_items= {
+                       'Get Help':'http://localhost:8501',
+                       'Report a bug':'http://localhost:8501',
+                       'About':'http://localhost:8501'                                              
+                   })
+st.subheader("Today's price, Tomorrow's home")
+
+# Set title of the app
+st.title('🏘️ PriceLah 🏘️ ')
+
 
 '''
 Configuration and preparation
@@ -110,21 +125,9 @@ feature_cols = ['mid_storey','hdb_age','bus_interchange','max_floor_lvl','Mall_N
                 'region_east','region_north','region_north_east','region_west']
 
 
-# Set Page configuration
-st.set_page_config(page_title='HDB Resale Price Predictor', 
-                   page_icon='house-buildings', 
-                   layout='centered', 
-                #    initial_sidebar_state='collapsed',
-                   menu_items= {
-                       'Get Help':'http://localhost:8501',
-                       'Report a bug':'http://localhost:8501',
-                       'About':'http://localhost:8501'                                              
-                   })
-st.subheader("Today's price, Tomorrow's home")
-
-# Set title of the app
-st.title('🏘️ PriceLah 🏘️ ')
-
+'''
+App 
+'''
 town = st.selectbox("Town",town_list)  # Dropdown on streamlit screen
 region = region_dict[town]
 
